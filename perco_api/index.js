@@ -1,5 +1,5 @@
 var nbind = require('nbind');
-var perco = nbind.init().lib.Perco;
+var perco = nbind.init(".sample_service/build/Release").lib.Perco;
 
 function getDivisions() {
     return new Promise(function(resolve, reject) {        
