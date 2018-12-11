@@ -1,3 +1,6 @@
+var nbind = require('nbind');
+var perco = nbind.init().lib.Perco;
+
 function getDivisions() {
     return new Promise(function(resolve, reject) {        
         // getDivisionsFromCOM((err, divisions) => {
@@ -21,7 +24,9 @@ function getStaffs(divisionId) {
         //     resolve(staffs)
         // })
 
-        staffs = '{staffs:[{"name":"first","id":1,"tab_n":"333"},{"name":"second","id":2,"tab_n":"234"},{"name":"third","id":3,"tab_n":"4382"}]}'
+        //staffs = '{staffs:[{"name":"first","id":1,"tab_n":"333"},{"name":"second","id":2,"tab_n":"234"},{"name":"third","id":3,"tab_n":"4382"}]}'
+
+        staffs = perco.getStaffs(1);
         resolve(staffs)
     })
 }
